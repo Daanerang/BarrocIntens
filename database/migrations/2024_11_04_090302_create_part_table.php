@@ -4,19 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class CreatePartTable extends Migration
 {
     public function up()
     {
-        Schema::create('rollen', function (Blueprint $table) {
-            $table->id('RolId');
-            $table->string('Naam');
+        Schema::create('part', function (Blueprint $table) {
+            $table->id('PartId');
+            $table->string('Name');
+            $table->integer('Stock');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('rollen');
+        Schema::dropIfExists('part');
     }
 }

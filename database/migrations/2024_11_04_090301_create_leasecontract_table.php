@@ -4,19 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLeasecontractTable extends Migration
+class CreateLeaseContractTable extends Migration
 {
     public function up()
     {
-        Schema::create('leasecontract', function (Blueprint $table) {
-            $table->id('LeasecontractId');
-            $table->foreignId('KlantId')->constrained('klant');
-            $table->foreignId('MedewerkerId')->constrained('user');
-            $table->dateTime('Startdatum');
-            $table->dateTime('Einddatum');
-            $table->string('Betalingsoptie');
-            $table->integer('Aantalmachines');
-            $table->string('Opzegtermijn');
+        Schema::create('lease_contracts', function (Blueprint $table) {
+            $table->id('LeaseContractId');
+            $table->foreignId('ClientId')->constrained('clients');
+            $table->foreignId('EmployeeId')->constrained('users');
+            $table->dateTime('StartDate');
+            $table->dateTime('EndDate');
+            $table->string('PaymentOption');
+            $table->integer('MachineCount');
+            $table->string('CancellationPeriod');
             $table->string('Status');
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ class CreateLeasecontractTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('leasecontract');
+        Schema::dropIfExists('lease_contracts');
     }
 }

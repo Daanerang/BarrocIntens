@@ -9,15 +9,15 @@ class Customer extends Model
 {
     use HasFactory;
 
-    protected $table = 'customer';
+    protected $table = 'customers';
     protected $primaryKey = 'CustomerId';
 
     protected $fillable = [
-        'company_name',
-        'contact_person',
-        'phonenumber',
-        'address',
-        'email',
+        'CompanyName',
+        'ContactPerson',
+        'PhoneNumber',
+        'Address',
+        'Email',
         'BKRCheckStatus'
     ];
 }

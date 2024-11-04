@@ -8,10 +8,10 @@ class CreateQuoteTable extends Migration
 {
     public function up()
     {
-        Schema::create('quote', function (Blueprint $table) {
-            $table->id('QuoteId')->unique();
-            $table->foreignId('CustomerId')->constrained('customer');
-            $table->foreignId('EmployeeId')->constrained('user');
+        Schema::create('quotes', function (Blueprint $table) {
+            $table->id('QuoteId');
+            $table->foreignId('CustomerId')->constrained('customers', 'CustomerId'); // Specify primary key column
+            $table->foreignId('EmployeeId')->constrained('users'); // Assuming 'id' is primary key in 'users'
             $table->string('Status');
             $table->dateTime('QuoteDate');
             $table->timestamps();
@@ -20,6 +20,6 @@ class CreateQuoteTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('quote');
+        Schema::dropIfExists('quotes');
     }
 }

@@ -9,13 +9,13 @@ class Quote extends Model
 {
     use HasFactory;
 
-    protected $table = 'quote';
+    protected $table = 'quotes';
     protected $primaryKey = 'QuoteId';
 
     protected $fillable = [
-        'customerId',
-        'employeeId',
-        'status',
-        'quote_date'
+        'CustomerId',
+        'EmployeeId',
+        'Status',
+        'QuoteDate'
     ];
 }

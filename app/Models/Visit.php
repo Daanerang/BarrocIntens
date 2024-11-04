@@ -9,17 +9,17 @@ class Visit extends Model
 {
     use HasFactory;
 
-    protected $table = 'visit';
-    protected $primaryKey = 'id';
+    protected $table = 'visits';
+    protected $primaryKey = 'VisitId';
 
     protected $fillable = [
-        'customerId',
-        'employeeId',
-        'roleId',
-        'visit_date',
-        'type',
-        'malfunction_details',
-        'adress',
-        'used_parts',
+        'CustomerId',
+        'EmployeeId',
+        'RoleId',
+        'VisitDate',
+        'Type',
+        'FaultDetails',
+        'Address', // Corrected spelling
+        'UsedMaterials',
     ];
 }

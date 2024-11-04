@@ -10,11 +10,11 @@ class Leasecontract extends Model
     use HasFactory;
 
     protected $table = 'leasecontract';
-    protected $primaryKey = 'Leasecontract_id';
+    protected $primaryKey = 'LeasecontractId';
 
     protected $fillable = [
-        'customer_id',
-        'employee_id',
+        'customerId',
+        'employeeId',
         'start_date',
         'end_date',
         'payment_method',

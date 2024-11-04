@@ -13,9 +13,9 @@ class Visit extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'customer_id',
-        'employee_id',
-        'role_id',
+        'customerId',
+        'employeeId',
+        'roleId',
         'visit_date',
         'type',
         'malfunction_details',

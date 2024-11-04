@@ -10,11 +10,11 @@ class Invoice extends Model
     use HasFactory;
 
     protected $table = 'invoice';
-    protected $primaryKey = 'invoice_id';
+    protected $primaryKey = 'InvoiceId';
 
     protected $fillable = [
-        'customer_id',
-        'employee_id',
+        'customerId',
+        'employeeId',
         'invoice_date',
         'amount',
         'is_paid'

@@ -10,11 +10,11 @@ class ErrorNotification extends Model
     use HasFactory;
 
     protected $table = 'error_notification';
-    protected $primaryKey = 'notification_id';
+    protected $primaryKey = 'NotificationId';
 
     protected $fillable = [
-        'customer_id',
-        'employee_id',
+        'customerId',
+        'employeeId',
         'notification_date',
         'status'
     ];

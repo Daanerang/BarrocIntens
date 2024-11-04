@@ -12,8 +12,8 @@ class LeasecontractProduct extends Model
     protected $table = 'leasecontract_product';
 
     protected $fillable = [
-        'Leasecontract_id',
-        'Product_id',
+        'LeasecontractId',
+        'ProductId',
         'quantity'
     ];
 }

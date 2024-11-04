@@ -8,9 +8,9 @@ class CreateQuoteTable extends Migration
 {
     public function up()
     {
-        Schema::create('Quote', function (Blueprint $table) {
-            $table->id('QuoteId');
-            $table->foreignId('ClientId')->constrained('client');
+        Schema::create('quote', function (Blueprint $table) {
+            $table->id('QuoteId')->unique();
+            $table->foreignId('CustomerId')->constrained('customer');
             $table->foreignId('EmployeeId')->constrained('user');
             $table->string('Status');
             $table->dateTime('QuoteDate');

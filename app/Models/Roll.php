@@ -5,17 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FactuurProduct extends Model
+class Roll extends Model
 {
     use HasFactory;
 
-    protected $table = 'factuur_product';
+    protected $table = 'roles';
+    protected $primaryKey = 'Rol_id';
 
     protected $fillable = [
-        'FactuurId',
-        'ProductId',
-        'Aantal',
-        'Prijs'
+        'name'
     ];
 }
-

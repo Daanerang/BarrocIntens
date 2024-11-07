@@ -7,6 +7,8 @@
     <title>Barroc intens</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://kit.fontawesome.com/bd40200337.js" crossorigin="anonymous"></script>
 </head>
 <body>
 

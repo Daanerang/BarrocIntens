@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('greeting')
-    Goedemorgen, [user]!
+    Goedemorgen, {{ auth()->user()->name }}!
 @endsection
 
 @section('content')

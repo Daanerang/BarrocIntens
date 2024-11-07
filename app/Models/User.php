@@ -10,9 +10,12 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use League\CommonMark\Extension\SmartPunct\Quote;
 
 class User extends Authenticatable
 {
+    protected $table = 'users';
+
     use HasApiTokens;
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -31,6 +34,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'rol_id',
     ];
 
     /**
@@ -65,5 +69,35 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function quotes()
+    {
+        return $this->hasMany(Quote::class, 'quote_id');
+    }
+
+    public function error_notifications()
+    {
+        return $this->hasMany(ErrorNotification::class, 'error_notification_id');
+    }
+
+    public function visits()
+    {
+        return $this->hasMany(Visit::class, 'visit_id');
+    }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class, 'invoice_id');
+    }
+
+    public function leasecontracts()
+    {
+        return $this->hasMany(LeaseContract::class, 'leasecontract_id');
+    }
+
+    public function roles()
+    {
+        return $this->belongsTo(Role::class, 'rol_id');
     }
 }

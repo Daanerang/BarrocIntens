@@ -20,7 +20,7 @@
                             <li><a href="#" class="hover:text-gray-900">Home</a></li>
                             <li><a href="#" class="hover:text-gray-900">Diensten</a></li>
                             <li><a href="#" class="hover:text-gray-900">Over Ons</a></li>
-                            <li><a href="#" class="hover:text-gray-900">Contact</a></li>
+                            <li><a href="{{ url('/contact') }}" class="hover:text-gray-900">Contact</a></li>
                         </ul>
                     </div>
 

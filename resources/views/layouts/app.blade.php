@@ -29,7 +29,7 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content')  <!-- Dit is de juiste syntax om content in je layout te injecteren -->
             </main>
         </div>
     </body>

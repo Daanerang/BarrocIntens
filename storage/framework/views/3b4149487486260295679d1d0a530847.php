@@ -1,0 +1,1 @@
+<?php /**PATH C:\laragon\www\BarrocIntens\resources\views\dashboard\head-sales.blade.php ENDPATH**/ ?>
